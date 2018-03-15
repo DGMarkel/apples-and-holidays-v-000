@@ -80,12 +80,14 @@ end
 
 
 def all_holidays_with_bbq(holiday_hash)
+  bbq_holidays = []
+
   holiday_hash.each do |season, holidays|
     holidays.each do |holiday, supplies_list|
       if supplies_list.include?("BBQ")
-        holiday
+        bbq_holidays << holiday
       end
-      holiday
     end
   end
+  bbq_holidays
 end
