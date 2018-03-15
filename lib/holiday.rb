@@ -74,12 +74,10 @@ end
 
 def all_holidays_with_bbq(holiday_hash)
 
-  holiday_hash.each do |season, holiday| 
-    puts "#{season.capitalize}:"      
+  holiday_hash.each do |season, holiday|
+    puts "#{season.capitalize}:"
       holiday.each do |holidays, supplies|
         puts "#{holidays.to_s.split("_").map(&:capitalize).join(" ")}: #{supplies.join(", ")}"
       end
   end
-end
-
 end
